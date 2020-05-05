@@ -632,7 +632,7 @@ if __name__ == '__main__':
     ex.add_config({"name":arglist.exp_name})
 
     # Check if we don't want to save to sacred mongodb
-    no_mongodb = True
+    no_mongodb = False
 
     # for _i, _v in enumerate(params):
     #     if "no-mongo" in _v:
@@ -642,7 +642,8 @@ if __name__ == '__main__':
     #         break
 
     config_dict={}
-    config_dict["db_url"] = "mongodb://pymarlOwner:EMC7Jp98c8rE7FxxN7g82DT5spGsVr9A@gandalf.cs.ox.ac.uk:27017/pymarl"
+    #config_dict["db_url"] = "mongodb://pymarlOwner:EMC7Jp98c8rE7FxxN7g82DT5spGsVr9A@gandalf.cs.ox.ac.uk:27017/pymarl"
+    config_dict["db_url"] = "mongodb://pymarlOwner:EMC7Jp98c8rE7FxxN7g82DT5spGsVr9A@gandalf.cs.ox.ac.uk:27017,tiger.cs.ox.ac.uk:27017,taipan.cs.ox.ac.uk:27017/pymarl?replicaSet=rs0"
     config_dict["db_name"] = "pymarl"
 
     # If there is no url set for the mongodb, we cannot use it
